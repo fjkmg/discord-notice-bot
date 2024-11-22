@@ -18,10 +18,7 @@ class SubCog(commands.Cog):
         self,
         ctx: discord.ApplicationContext,
         # name引数を受け取る様に設定します。
-        name: Option(
-            str,
-            description="引数の説明",
-        ),
+        name,
     ):
         # 引数の段階だと型がstr型かわかりにくいので注釈をつけてます
         name: str = name
