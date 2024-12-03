@@ -9,7 +9,10 @@ GUILDS = [int(v) for v in os.getenv("GUILDS").split(",")]
 intents = discord.Intents.default()
 
 # debug_guildsは公開BOTの場合は必要ないです
-bot = commands.Bot(debug_guilds=GUILDS, intents=intents)
+bot = commands.Bot(
+    # debug_guilds=GUILDS,
+    intents=intents
+)
 
 
 # botが動いてるか確認するだけのヤツ
