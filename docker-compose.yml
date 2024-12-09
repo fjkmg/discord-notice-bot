@@ -14,4 +14,3 @@ services:
       - GUILDS=${GUILDS}
     command: ["python3", "main.py"]
     tty: true
-    restart: always
