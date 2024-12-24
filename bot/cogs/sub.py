@@ -26,15 +26,8 @@ class SubCog(commands.Cog):
         await ctx.response.send_message(f"{name}さん、こんにちは！")
 
     @com.command()
-    async def status(ctx, member: discord.Member = None):
-        if member is None:
-            member = ctx.author
-        embed = discord.Embed(
-            title=f"{member.name} your current status is",
-            description=f"{member.activities[0].name}",
-            color=0xCD32A7,
-        )
-        await ctx.send(embed=embed)
+    async def status(self, ctx, member: discord.Member):
+        await ctx.response.send_message(str(member.status))
 
 
 # main.pyのload_extensionsのが実行する実際の関数を定義します
