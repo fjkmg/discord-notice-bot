@@ -1,6 +1,10 @@
+import logging
 import discord
 from discord.ext import commands
 import os
+
+# ログの設定 https://docs.pycord.dev/en/stable/logging.html
+logging.basicConfig(level=logging.INFO)
 
 # docker-composeから渡された環境変数の設定
 TOKEN = os.getenv("TOKEN")
