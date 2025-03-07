@@ -11,6 +11,7 @@ TOKEN = os.getenv("TOKEN")
 GUILDS = [int(v) for v in os.getenv("GUILDS").split(",")]
 # intentsの設定（エラーが出るまで基本defaultで良いです）
 intents = discord.Intents.default()
+intents.members = True  # membersを受け取って全メンバーを取得できるようにする
 
 # debug_guildsは公開BOTの場合は必要ないです
 bot = commands.Bot(
